@@ -494,11 +494,11 @@ def run_backtester(account_balance_start, leverage, order_size,  start, end, TIM
 
 if __name__ == "__main__":
 
-    # start = "05-07-23"
-    # end = "13-07-23"
+    start = "05-07-23"
+    end = "13-07-23"
 
-    start = "01-04-23"
-    end = "05-07-23"
+    # start = "01-04-23"
+    # end = "05-07-23"
 
     buffer = 500 ## candlestick buffer, should be 5x your largest EMA length
     account_balance = 500  ## Starting account size
@@ -521,8 +521,8 @@ if __name__ == "__main__":
     particular_drawdown = False  ## Flag for minimum drawdown below
     min_dd = 1  ## 1%, Only print coins which have had less than this drawdown when the above flag 'particular_drawdown' is True
 
-    symbol = ['BCHUSDT']  ## list of coins to trade, example: ['BTCUSDT', 'BTCDOMUSDT', 'ETHUSDT', 'BNBUSDT', 'BAKEUSDT', 'BCHUSDT']
-    Trade_All_Symbols = False  ## will test on all coins on exchange if true
+    symbol = ['BTCUSDT', 'BTCDOMUSDT', 'ETHUSDT', 'BNBUSDT', 'BAKEUSDT', 'BCHUSDT']  ## list of coins to trade, example: ['BTCUSDT', 'BTCDOMUSDT', 'ETHUSDT', 'BNBUSDT', 'BAKEUSDT', 'BCHUSDT']
+    Trade_All_Symbols = True  ## will test on all coins on exchange if true
 
     '''
      Trade Graphing Settings
