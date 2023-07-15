@@ -147,6 +147,8 @@ def update_higher_timeframe_candles(cur_price_data, Date, Close, Volume, Open, H
         #:return: list of OHLCV values (Open time, Open, High, Low, Close, Volume, Close time, Quote asset volume, Number of trades, Taker buy base asset volume, Taker buy quote asset volume, Ignore)
         candle_open = Date[i]
         if isinstance(candle_open, str):
+            print('candle_open', candle_open)
+            exit(0)
             candle_open = datetime.strptime(candle_open, '%Y-%m-%d %H:%M:%S')
         candle_close = candle_open + timedelta(minutes=1) # datetime.utcfromtimestamp((round(Date[i] / 1000))) # Date[i]
 
