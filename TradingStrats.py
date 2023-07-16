@@ -28,6 +28,7 @@ def bb_confluence(Trade_Direction, Close, Open, High, Low, current_index,
     global has_buy_confluence
 
     price = Close[current_index]
+    print(f'price {price}, 4hbb_high {bollinger_lband_4h[-1]}')
     if (price < bollinger_hband_4h[-1] and price > bollinger_lband_4h[-1]) or (price < bollinger_hband_1h[-1] and price > bollinger_lband_1h[-1]) and not (has_sell_confluence or has_buy_confluence): #or (price < bollinger_hband_30m[-1] and price > bollinger_lband_30m[-1]):
         return Trade_Direction
     
