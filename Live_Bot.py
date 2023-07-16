@@ -44,9 +44,6 @@ def web_soc_process(pipe: Pipe, twm: ThreadedWebsocketManager):
         for data in DH:
             if data.new_data:
                 count += 1
-                print('new data', data.new_data)
-            else:
-                print('nothing found')
             if data.socket_failed:
                 try:
                     print(f"Attempting to reset socket for {data.symbol}")
