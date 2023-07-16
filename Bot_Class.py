@@ -400,6 +400,7 @@ class Bot:
         #    print(f"Date: {self.Date[i]}, Open_H: {self.Open_H[i]}, Close_H: {self.Close_H[i]}, High_H: {self.High_H[i]}, Low_H: {self.Low_H[i]}")
 
     def handle_socket_message(self, Data, Date=0, Close=0, Volume=0, Open=0, High=0, Low=0):
+        print(Data, Date, Close, Volume, Open, High, Low)
         try:
             if Data == -99:
                 self.Date.append(Date)
