@@ -35,7 +35,6 @@ def listen_pipe(pipe: Pipe):
  
 
 def web_soc_process(pipe: Pipe, twm: ThreadedWebsocketManager):
-    print('pipe called for websocket')
     global DH, Data, streams
     ##keep process running
     while True:
@@ -59,6 +58,7 @@ def web_soc_process(pipe: Pipe, twm: ThreadedWebsocketManager):
             for data in DH:
                 data.new_data = False
                 Data[data.symbol] = data.next_candle
+            print('sending', Data)
             pipe.send(Data)
 
 def combine_data(Bots: [Bot_Class.Bot], symbol, streams, buffer, Interval, client):
