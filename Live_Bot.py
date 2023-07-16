@@ -451,6 +451,7 @@ if __name__ == '__main__':
     i = 0
     while i < len(symbol):
         try:
+            print('working on {symbol[i]}')
             DH.append(Data_Handler(symbol[i], i))
             streams.append(twm.start_kline_futures_socket(callback=DH[i].handle_socket_message, symbol=symbol[i],
                                                           interval=Interval))
