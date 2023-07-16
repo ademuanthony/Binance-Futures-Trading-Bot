@@ -13,7 +13,7 @@ BASE_URL = os.getenv('BASE_URL')
 order_Size = 2.5  # As % of account, i.e 2.5 = 2.5%
 leverage = 10
 # Buffer of candle sticks be careful if you don't provide enough the bot will throw an error
-buffer = '2 day ago'
+buffer = '4 day ago'
 Interval = '1m'  # candle sticks you want to trade
 Max_Number_Of_Trades = 8  # How many positions we can have open at once
 # If on we will use our TP value as the Activation price for a trailing stop loss
@@ -25,7 +25,7 @@ trading_threshold = 0.1  # %, i.e 0.1 = 0.1%
 
 # New vars needed for the gui, running script from terminal will also need these now
 strategy = 'bb_confluence'
-TP_SL_choice = 'x (Swing High/Low) level 3'
+TP_SL_choice = '1h (Swing High/Low) level 1'
 SL_mult = .5
 TP_mult = 1
 
