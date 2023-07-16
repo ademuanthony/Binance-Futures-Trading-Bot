@@ -349,7 +349,7 @@ def run_bot(API_KEY, API_SECRET, leverage, order_Size, buffer, Interval, Max_Num
     twm = ThreadedWebsocketManager(api_key=API_KEY, api_secret=API_SECRET)
     twm.start()  ##start manager
 
-    print("Setting Leverage...", symbol)
+    print("Setting Leverage...")
     i = 0
     while i < len(symbol):
         try:
@@ -434,7 +434,7 @@ if __name__ == '__main__':
     twm = ThreadedWebsocketManager(api_key=API_KEY, api_secret=API_SECRET)
     twm.start()  ##start manager
 
-    print("Setting Leverage...")
+    print("Setting Leverage...", symbol)
     i = 0
     while i < len(symbol):
         try:
