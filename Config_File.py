@@ -34,4 +34,4 @@ Trade_All_Coins = False
 symbol = ['AAVEUSDT', 'APEUSDT', 'API3USDT', 'AUDIOUSDT', 'AVAXUSDT', 'AXSUSDT', 'BAKEUSDT', 'DYDXUSDT', 'ENSUSDT', 'LITUSDT', 'NEARUSDT', 'RAYUSDT', 'PEOPLEUSDT',
           'RUNEUSDT', 'BTCUSDT', 'BTCDOMUSDT', 'ETHUSDT', 'BNBUSDT', 'BAKEUSDT', 'BCHUSDT']  # If Trade_All_Coins is False then we list the coins we want to trade here, otherwise the bot will automatically get all coins and trade them
 
-symbol = ['BNBUSDT']
+symbol = ['BCHUSDT']

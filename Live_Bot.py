@@ -111,7 +111,7 @@ def Check_for_signals(pipe: Pipe, leverage: int, order_Size: float, buffer: str,
         if x['asset'] == 'USDT':
             AccountBalance = float(x['balance'])
             break
-    print("Start Balancer:", AccountBalance)
+    print("Start Balance:", AccountBalance)
 
     start = datetime.now().time()
     yesterdate = date.today()
