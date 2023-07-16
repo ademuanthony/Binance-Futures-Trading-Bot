@@ -521,7 +521,8 @@ if __name__ == "__main__":
     particular_drawdown = False  ## Flag for minimum drawdown below
     min_dd = 1  ## 1%, Only print coins which have had less than this drawdown when the above flag 'particular_drawdown' is True
 
-    symbol = ['BTCUSDT', 'BTCDOMUSDT', 'ETHUSDT', 'BNBUSDT', 'BAKEUSDT', 'BCHUSDT']  ## list of coins to trade, example: ['BTCUSDT', 'BTCDOMUSDT', 'ETHUSDT', 'BNBUSDT', 'BAKEUSDT', 'BCHUSDT']
+    symbol = ['AAVEUSDT', 'APEUSDT', 'API3USDT', 'AUDIOUSDT', 'AVAXUSDT', 'AXSUSDT', 'BAKEUSDT', 'DYDXUSDT', 'ENSUSDT', 'LITUSDT', 'NEARUSDT', 'RAYUSDT', 'PEOPLEUSDT',
+          'RUNEUSDT', 'BTCUSDT', 'BTCDOMUSDT', 'ETHUSDT', 'BNBUSDT', 'BAKEUSDT', 'BCHUSDT']  ## list of coins to trade, example: ['BTCUSDT', 'BTCDOMUSDT', 'ETHUSDT', 'BNBUSDT', 'BAKEUSDT', 'BCHUSDT']
     Trade_All_Symbols = False  ## will test on all coins on exchange if true
 
     '''
