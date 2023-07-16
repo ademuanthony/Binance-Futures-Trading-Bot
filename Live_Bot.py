@@ -44,6 +44,9 @@ def web_soc_process(pipe: Pipe, twm: ThreadedWebsocketManager):
         for data in DH:
             if data.new_data:
                 count += 1
+                print('new data', data.new_data)
+            else:
+                print('nothing found')
             if data.socket_failed:
                 try:
                     print(f"Attempting to reset socket for {data.symbol}")
@@ -58,7 +61,6 @@ def web_soc_process(pipe: Pipe, twm: ThreadedWebsocketManager):
             for data in DH:
                 data.new_data = False
                 Data[data.symbol] = data.next_candle
-            print('sending', Data)
             pipe.send(Data)
 
 def combine_data(Bots: [Bot_Class.Bot], symbol, streams, buffer, Interval, client):
