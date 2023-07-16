@@ -349,7 +349,7 @@ def run_bot(API_KEY, API_SECRET, leverage, order_Size, buffer, Interval, Max_Num
     twm = ThreadedWebsocketManager(api_key=API_KEY, api_secret=API_SECRET)
     twm.start()  ##start manager
 
-    print("Setting Leverage...")
+    print("Setting Leverage...", symbol)
     i = 0
     while i < len(symbol):
         try:
@@ -366,7 +366,6 @@ def run_bot(API_KEY, API_SECRET, leverage, order_Size, buffer, Interval, Max_Num
     i = 0
     while i < len(symbol):
         try:
-            print(f'setting stream for {symbol}')
             DH.append(Data_Handler(symbol[i], i))
             streams.append(twm.start_kline_futures_socket(callback=DH[i].handle_socket_message, symbol=symbol[i],
                                                           interval=Interval))
@@ -382,7 +381,7 @@ def run_bot(API_KEY, API_SECRET, leverage, order_Size, buffer, Interval, Max_Num
     y = client.futures_exchange_info()['symbols']
     coin_info = [[x['pair'], x['pricePrecision'], x['quantityPrecision'], x['filters'][0]['tickSize'],
                   x['filters'][0]['minPrice']] for x in y]
-    print('symbol', symbol)
+
     i = 0
     while i < len(symbol):
         print(f"Starting {symbol[i]} web socket")
