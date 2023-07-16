@@ -111,7 +111,7 @@ def Check_for_signals(pipe: Pipe, leverage: int, order_Size: float, buffer: str,
         if x['asset'] == 'USDT':
             AccountBalance = float(x['balance'])
             break
-    print("Start Balance:", AccountBalance)
+    print("Start Balancer:", AccountBalance)
 
     start = datetime.now().time()
     yesterdate = date.today()
@@ -434,7 +434,7 @@ if __name__ == '__main__':
     twm = ThreadedWebsocketManager(api_key=API_KEY, api_secret=API_SECRET)
     twm.start()  ##start manager
 
-    print("Setting Leverage...", symbol)
+    print("Setting Leverage...")
     i = 0
     while i < len(symbol):
         try:
