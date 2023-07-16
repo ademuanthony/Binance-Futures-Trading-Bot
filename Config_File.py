@@ -32,4 +32,4 @@ TP_mult = 1
 # Trade All Coins if True, can also specify a list of coins to trade instead. Example: symbol = ['ETHUSDT','BTCUSDT'] & set Trade_All_Coins = False
 Trade_All_Coins = False
 symbol = ['AAVEUSDT', 'APEUSDT', 'API3USDT', 'AUDIOUSDT', 'AVAXUSDT', 'AXSUSDT', 'BAKEUSDT', 'DYDXUSDT', 'ENSUSDT', 'LITUSDT', 'NEARUSDT', 'RAYUSDT', 'PEOPLEUSDT',
-          'RUNEUSDT']  # If Trade_All_Coins is False then we list the coins we want to trade here, otherwise the bot will automatically get all coins and trade them
+          'RUNEUSDT', 'BTCUSDT', 'BTCDOMUSDT', 'ETHUSDT', 'BNBUSDT', 'BAKEUSDT', 'BCHUSDT']  # If Trade_All_Coins is False then we list the coins we want to trade here, otherwise the bot will automatically get all coins and trade them
