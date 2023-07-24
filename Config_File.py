@@ -10,7 +10,7 @@ API_SECRET = os.getenv('BINANCE_API_SECRET')
 BASE_URL = os.getenv('BASE_URL')
 
 ################## settings, these are very strategy dependant ensure you have enough data for your chosen strategy ##################################
-order_Size = 5  # As % of account, i.e 2.5 = 2.5%
+order_Size = 2.5  # As % of account, i.e 2.5 = 2.5%
 leverage = 10
 # Buffer of candle sticks be careful if you don't provide enough the bot will throw an error
 buffer = '4 day ago'
