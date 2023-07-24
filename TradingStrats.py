@@ -28,7 +28,6 @@ def bb_confluence(Trade_Direction, Close, Open, High, Low, current_index,
     global has_buy_confluence
 
     price = Close[current_index]
-    print(f'price {price}, 4hbb_high {bollinger_lband_4h[-1]}')
     if (price < bollinger_hband_4h[-1] and price > bollinger_lband_4h[-1]) or (price < bollinger_hband_1h[-1] and price > bollinger_lband_1h[-1]) and not (has_sell_confluence or has_buy_confluence): #or (price < bollinger_hband_30m[-1] and price > bollinger_lband_30m[-1]):
         return Trade_Direction
     
@@ -782,14 +781,14 @@ def SetSLTP(stop_loss_val_arr, take_profit_val_arr, peaks, troughs, Close, High,
                 amt = High[current_index] + 6
             else:
                 amt = max(High[minIndex:i])
-            take_profit_val = abs(indicators["bollinger_lband_5m"]["values"][-1] - price)
+            take_profit_val = abs(indicators["bollinger_lband_1h"]["values"][-1] - price)
             stop_loss_val = max(2*take_profit_val/3, abs(amt - price))
         else:
             if minIndex <= i:
                 amt = High[current_index] + 6
             else:
                 amt = min(Low[minIndex:i])
-            take_profit_val = abs(indicators["bollinger_hband_5m"]["values"][-1] - price)
+            take_profit_val = abs(indicators["bollinger_hband_1h"]["values"][-1] - price)
             stop_loss_val = max(2*take_profit_val/3, abs(amt - price))
 
     if TP_SL_choice == '%':
